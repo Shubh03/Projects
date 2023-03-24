@@ -1,0 +1,4 @@
+SELECT DATE(transaction_time) as transaction_date, AVG(transaction_amount) as avg_transaction_amount
+FROM transactions
+WHERE transaction_time >= '2021-01-01' AND transaction_time < '2021-02-01'
+GROUP BY DATE(transaction_time)
